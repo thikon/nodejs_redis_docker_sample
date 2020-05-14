@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  nodejs:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: thikon/node-web-app
+    container_name: nodejs
+    ports: 
+      - "8080:8080"
+    volumes:
+      - .:/usr/src/service/
+    working_dir: /usr/src/service/    
+
